@@ -10,7 +10,7 @@ const app = express();
 dotenv.config();
 
 mongoose.connect(
-  "mongodb+srv://shubham:shubham@cluster0.nhpd3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("connected to mongo");
